@@ -1,0 +1,14 @@
+{
+  "name": "lj",
+  "version": "1.0.0",
+  "description": "= Learning Javascript, 3rd Edition == Chapter 2: JavaScript Development Tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
