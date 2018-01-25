@@ -10,3 +10,7 @@ node_modules
 # 임시 파일
 *.tmp
 *~
+
+# dist 폴더
+dist
+public/dist
