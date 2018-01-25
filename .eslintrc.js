@@ -8,10 +8,10 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
+        // "indent": [
+        //     "error",
+        //     "tab"
+        // ],
         "linebreak-style": [
             "error",
             "unix"
@@ -23,6 +23,13 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "CallExpression[callee.object.name='console'][callee.property.name=/^(log|warn|error|info|trace)$/]",
+                "message": "Unexpected property on console object was called"
+            }
         ]
     }
 };
