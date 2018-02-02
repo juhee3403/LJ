@@ -1,3 +1,4 @@
+
 // 블록문(block statement)
 
 // 불록문 엄밀히 말해 제어문이 아니지만 제어문과 함께 쓰인다.
@@ -7,10 +8,10 @@
 // 제어문 없이 블록문만 써도 되지만 별 의미는 없다.
 // 다음을 보자
 
-{ // 블록문 시작
+{   // 블록문 시작
     console.log("statement1");
     console.log("statement2");
-} // 블록문 끝
+}   // 블록문 끝
 console.log("statement3");
 // 처음 두 console.log는 블록 안에 있다.
 // 유효한 문법이지만, 무의미하다.
@@ -33,9 +34,9 @@ console.log("statement3");
 // 그렇다고 해서 공백을 아무렇게나 쓰는게 아니고,다음과 같이 쓰자.
 
 let funds = 50;
-while (funds > 1 && funds < 100)
+while(funds>1 && funds<100)
 
-    funds = funds + 2;
+funds = funds + 2;
 // 하지만 이 코드는 두 문 사이에 어떤 연관이 있다는 느낌을 주지 않는다.
 // 이런 코드는 오해의 소지가 다분하니 피해야 한다.
 // 다음 코드도 같은 일은 하는데, 이런 스타일은 비교적 흔히 쓰이는 편이고 모호해 보이지도 않는다.
@@ -44,9 +45,7 @@ while (funds > 1 && funds < 100)
 while (funds > 1 && funds < 100) funds = funds + 2;
 
 // 줄바꿈 없이 문하나를 블록안에 썼음.
-while (funds > 1 && funds < 100) {
-    funds = funds + 2;
-}
+while (funds > 1 && funds < 100) {funds = funds + 2;}
 
 // 프로그래머 중에는 제어문 바디를 항상(단 하나의 문이라도) 블록 안에 써서 일관성을 유지하고
 // 의미를 명료하게 표현해야 한다고 주장하는 사람들이 있다.
@@ -54,14 +53,14 @@ while (funds > 1 && funds < 100) {
 
 while (funds > 1 && funds < 100)
     funds = funds + 2;
-funds = funds - 1;
+    funds = funds - 1;
 // 언뜻 보면 while 루프의 바디에서 2개 문을 실행하는 것처럼 보인다.
 // 하지만 여기에는 블록이 없으므로 js는 위 코드를 다음과 같이 해석한다. 
 
 while (funds > 1 && funds < 100)
-    funds = funds + 2; // 루프 바디
+    funds = funds + 2;      // 루프 바디
 
-funds = funds - 1; // while이 끝난 다음 실행
+funds = funds - 1;          // while이 끝난 다음 실행
 
 // 필자는 개인적으로 문 하나만 쓸 때 블록을 생략하는 편이지만,
 // 들여쓰기는 항상 의미가 명확히 드러나도록 써야 한다.
@@ -70,10 +69,10 @@ funds = funds - 1; // while이 끝난 다음 실행
 // 같은 if문 안에 블록문과 블록없는 문을 섞어 쓰지 말자.
 if (funds > 1) {
     console.log("1111");
-} else // 블록 없음
+} else          // 블록 없음
     console.log("other");
 
-if (funds > 1)
+if (funds > 1)  // 블록 없음
     console.log("1111");
 else {
     console.log("other");
