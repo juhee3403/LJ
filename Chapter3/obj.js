@@ -18,24 +18,24 @@ const obj = {};
 // 일반적으로 user나 shoppingCart처럼
 // 의미를 알 수 있는 이름을 써야 한다.
 
-// 객체의 콘텐츠는 프롶퍼티(property)또는 멤버(member)라고 불린다.
+// 객체의 콘텐츠는 프로퍼티(property)또는 멤버(member)라고 불린다.
 // 프로퍼티는 이름(키)과 값으로 구성된다.
-// 프로퍼티 이음은 반드시 문자열 또는 심볼이어야 하며,
+// 프로퍼티 이름은 반드시 문자열 또는 심볼이어야 하며,
 // 값은 어떤 타입이든 상관없고, 다른 객체여도 상관없다.
 
 obj.color = "yellow";
 
 // 프로퍼티 이름에 유효한 식별자를 써야 
-// ' "." 멤버 접근 연산자(member access operator)'를 사용할 수 있다.
+// "." 멤버 접근 연산자(member access operator)를 사용할 수 있다.
 // 프로퍼티 이름에 유요한 식별자가 아닌 이름을 쓴다면
-// ' "[]" 계산된 멤버 접근 연산자(computed member access operator)'를 써야 한다.
-// 만약 프로퍼티 이름이 유요한 식별자여도 대괄호로 접근할 수 있다.
+// "[]" 계산된 멤버 접근 연산자(computed member access operator)를 써야 한다.
+// 만약 프로퍼티 이름이 유효한 식별자여도 대괄호로 접근할 수 있다.
 
 obj["not an identifier"] = 3;
 obj["not an identifier"];       // 3
 obj["color"];                   // "yellow"
 
-// 심볼프로터피에 접근할 때도 대괄호를 사용한다.
+// 심볼 프로퍼티에 접근할 때도 대괄호를 사용한다.
 const SIZE = Symbol();
 obj[SIZE] = 8;
 obj[SIZE];                      // 8
